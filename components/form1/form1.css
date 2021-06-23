@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #002233;
+  height: 100vh;
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+body::after {
+  content: "";
+  width: 250px;
+  height: 250px;
+  background-image: linear-gradient(
+    to top left,
+    rgb(19, 28, 128),
+    rgb(25, 39, 135),
+    rgb(31, 50, 142),
+    rgb(37, 60, 149),
+    rgb(43, 71, 156),
+    rgb(49, 82, 163),
+    rgb(56, 93, 169),
+    rgb(62, 104, 176),
+    rgb(68, 115, 183),
+    rgb(74, 125, 190),
+    rgb(80, 136, 197),
+    rgb(86, 147, 204)
+  );
+  position: fixed;
+  border-radius: 100%;
+  left: 5%;
+  top: 5%;
+  box-shadow: 5px 5px 3px #002133;
+  z-index: -1;
+}
+body::before {
+  content: "";
+  width: 250px;
+  height: 250px;
+  background-image: linear-gradient(
+    to top right,
+    rgb(19, 28, 128),
+    rgb(25, 39, 135),
+    rgb(31, 50, 142),
+    rgb(37, 60, 149),
+    rgb(43, 71, 156),
+    rgb(49, 82, 163),
+    rgb(56, 93, 169),
+    rgb(62, 104, 176),
+    rgb(68, 115, 183),
+    rgb(74, 125, 190),
+    rgb(80, 136, 197),
+    rgb(86, 147, 204)
+  );
+  position: fixed;
+  border-radius: 100%;
+  right: 5%;
+  bottom: 5%;
+  box-shadow: -5px 5px 3px #001c2b;
+  z-index: -1;
+}
+
+header {
+  width: 60%;
+  margin: 3em auto 2em auto;
+  text-align: center;
+}
+
+header p {
+  font-size: 1.3em;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+/* form container */
+
+section {
+  background-color: rgba(255, 255, 255, 0.05);
+  width: 60%;
+  margin: auto;
+  padding: 3em;
+  font-weight: 400;
+}
+
+/* form general */
+
+form div{
+  margin-bottom: 2em;
+}
+
+.perosnal-info label,
+.dropdown label,
+.radio-buttons p,
+.checkboxes p,
+.comments p {
+  font-size: 1.3em;
+}
+
+.dropdown label select:focus,
+input:focus,
+.comments textarea:focus {
+  outline: #002233;
+}
+
+/* perosnal info part */
+
+.perosnal-info input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px auto 20px auto;
+}
+
+input::placeholder {
+  text-transform: capitalize;
+}
+
+/* dropdown */
+.dropdown label select {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* radio buttons and checkboxes */
+
+.radio-buttons p {
+  margin-bottom: 10px;
+}
+
+.radio-buttons label,
+.checkboxes label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  width: max-content;
+}
+
+/* comments */
+
+.comments p {
+  margin-bottom: 10px;
+}
+
+.comments textarea {
+  width: 100%;
+  padding: 20px;
+}
+
+.comments textarea::placeholder {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+#submit {
+  width: 100%;
+  padding: 15px;
+  font-size: 1em;
+  background-image: linear-gradient(
+    to top left,
+    rgb(19, 28, 128),
+    rgb(25, 39, 135),
+    rgb(31, 50, 142),
+    rgb(37, 60, 149),
+    rgb(43, 71, 156),
+    rgb(49, 82, 163),
+    rgb(56, 93, 169),
+    rgb(62, 104, 176),
+    rgb(68, 115, 183),
+    rgb(74, 125, 190),
+    rgb(80, 136, 197),
+    rgb(86, 147, 204)
+  );
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#submit:hover{
+    background-image:none;
+    background-color: rgba(255, 255, 255, 0.07);
+}

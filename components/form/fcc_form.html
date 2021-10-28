@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Form</title>
 
-    <link rel="stylesheet" href="./form1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="./fcc_form.css">
+    <script src="./fcc_form.js" defer></script>
+</head>
 
 <body>
     <header>
@@ -25,15 +28,23 @@
     <section>
         <form id="survey-form">
             <div class="perosnal-info">
-                <label for="name" id="name-label">Name
-                    <input type="text" id="name" placeholder="enter your name" required>
-                </label>
-                <label for="email" id="email-label">Email
-                    <input type="email" id="email" placeholder="enter your email" required>
-                </label>
-                <label for="number" id="number-label">Age
-                    <input type="number" id="number" placeholder="enter your age" min="10" max="120">
-                </label>
+                <div class="input-wrapper">
+                    <label for="name" id="name-label">Name</label>
+                    <input type="text" id="name" placeholder="enter your name" required class="required-fields" autocomplete="off">
+                    <span class="error-message hide">Field must be filled!</span>
+                </div>
+                <div class="input-wrapper">
+                    <label for="email" id="email-label">Email</label>
+                    <input type="email" id="email" placeholder="enter your email" required class="required-fields">
+                    <span class="error-message hide">Field must be filled!</span>
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="number" id="number-label">Age</label>
+                    <input type="number" id="number" placeholder="enter your age" min="10" max="120" required
+                        class="required-fields">
+                    <span class="error-message hide">Field must be filled!</span>
+                </div>
             </div>
 
             <div class="dropdown">

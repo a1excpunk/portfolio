@@ -6,62 +6,12 @@
 
 body {
   background: #002233;
-  height: 100vh;
   color: #fff;
   font-family: "Source Sans Pro", sans-serif;
 }
 
-body::after {
-  content: "";
-  width: 250px;
-  height: 250px;
-  background-image: linear-gradient(
-    to top left,
-    rgb(19, 28, 128),
-    rgb(25, 39, 135),
-    rgb(31, 50, 142),
-    rgb(37, 60, 149),
-    rgb(43, 71, 156),
-    rgb(49, 82, 163),
-    rgb(56, 93, 169),
-    rgb(62, 104, 176),
-    rgb(68, 115, 183),
-    rgb(74, 125, 190),
-    rgb(80, 136, 197),
-    rgb(86, 147, 204)
-  );
-  position: fixed;
-  border-radius: 100%;
-  left: 5%;
-  top: 5%;
-  box-shadow: 5px 5px 3px #002133;
-  z-index: -1;
-}
-body::before {
-  content: "";
-  width: 250px;
-  height: 250px;
-  background-image: linear-gradient(
-    to top right,
-    rgb(19, 28, 128),
-    rgb(25, 39, 135),
-    rgb(31, 50, 142),
-    rgb(37, 60, 149),
-    rgb(43, 71, 156),
-    rgb(49, 82, 163),
-    rgb(56, 93, 169),
-    rgb(62, 104, 176),
-    rgb(68, 115, 183),
-    rgb(74, 125, 190),
-    rgb(80, 136, 197),
-    rgb(86, 147, 204)
-  );
-  position: fixed;
-  border-radius: 100%;
-  right: 5%;
-  bottom: 5%;
-  box-shadow: -5px 5px 3px #001c2b;
-  z-index: -1;
+.hide{
+  display: none;
 }
 
 header {
@@ -84,7 +34,9 @@ section {
   margin: auto;
   padding: 3em;
   font-weight: 400;
+  margin-bottom: 2em;
 }
+
 
 /* form general */
 
@@ -112,20 +64,27 @@ input:focus,
   display: block;
   width: 100%;
   padding: 10px;
-  margin: 10px auto 20px auto;
+  margin: 10px auto 20px;
 }
+
+.input-wrapper{
+  position: relative;
+}
+
 
 input::placeholder {
   text-transform: capitalize;
 }
 
 /* dropdown */
+
 .dropdown label select {
   margin-top: 20px;
   width: 100%;
   padding: 10px;
   cursor: pointer;
 }
+
 
 /* radio buttons and checkboxes */
 
@@ -184,4 +143,17 @@ input::placeholder {
 #submit:hover{
     background-image:none;
     background-color: rgba(255, 255, 255, 0.07);
+}
+
+.error-message{
+  font-size: 14px;
+  color: #e40000;
+  position: absolute;
+  bottom: -20px;
+}
+
+@media screen and (max-width:700px) {
+  section{
+    width: 90%;
+  }
 }
